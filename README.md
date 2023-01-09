@@ -1,6 +1,6 @@
 # selenium-hub-ec2
 
-The repo contains the necessary files and isntructions for deploying an EC2 Instance with public IP using Terrafrom.
+This repo contains the necessary files and instructions for deploying an EC2 Instance with public IP using Terrafrom running a containerized Selenium Grid .
 
 ## Requiremnts
 - Terraform v1.3.7
