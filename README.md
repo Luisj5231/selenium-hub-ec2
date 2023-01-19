@@ -36,25 +36,25 @@ $ podman run -d --net grid --ip 172.18.0.22 \
 ```
 3. Deploy Chrome nodes:
 ```sh
-$ podman run -d --net grid --shm-size="2g" \
+$ podman run -d --net grid --shm-size="2g" -p 5001:5555 \
 	-e SE_EVENT_BUS_HOST=172.18.0.22 \
 	-e SE_EVENT_BUS_PUBLISH_PORT=4442 \
 	-e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
 	docker.io/selenium/node-chrome:4.7.2-20221219
   
-$ podman run -d --net grid --shm-size="2g" \
+$ podman run -d --net grid --shm-size="2g" -p 5002:5555\
 	-e SE_EVENT_BUS_HOST=172.18.0.22 \
 	-e SE_EVENT_BUS_PUBLISH_PORT=4442 \
 	-e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
 	docker.io/selenium/node-chrome:4.7.2-20221219
   
-$ podman run -d --net grid --shm-size="2g" \
+$ podman run -d --net grid --shm-size="2g" -p 5003:5555\
 	-e SE_EVENT_BUS_HOST=172.18.0.22 \
 	-e SE_EVENT_BUS_PUBLISH_PORT=4442 \
 	-e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
 	docker.io/selenium/node-chrome:4.7.2-20221219
   
-$ podman run -d --net grid --shm-size="2g" \
+$ podman run -d --net grid --shm-size="2g" -p 5004:5555\
 	-e SE_EVENT_BUS_HOST=172.18.0.22 \
 	-e SE_EVENT_BUS_PUBLISH_PORT=4442 \
 	-e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
@@ -64,7 +64,7 @@ $ podman run -d --net grid --shm-size="2g" \
 ## Notes
 Firefox node:
 ```sh
-$ podman run -d --net grid --shm-size="2g" \
+$ podman run -d --net grid --shm-size="2g" -p 5005:5555\
     -e SE_EVENT_BUS_HOST=172.18.0.22 \
     -e SE_EVENT_BUS_PUBLISH_PORT=4442 \
     -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
@@ -73,7 +73,7 @@ $ podman run -d --net grid --shm-size="2g" \
 
 Edge node:
 ```sh
-$ podman run -d --net grid --shm-size="2g" \
+$ podman run -d --net grid --shm-size="2g" -p 5006:5555\
     -e SE_EVENT_BUS_HOST=172.18.0.22 \
     -e SE_EVENT_BUS_PUBLISH_PORT=4442 \
     -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
